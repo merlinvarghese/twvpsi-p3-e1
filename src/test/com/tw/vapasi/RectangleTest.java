@@ -5,7 +5,7 @@ class RectangleTest {
 
     @Test
     void expectAreaIs200ForLength20andWidth10(){
-        Rectangle rectangle = new Rectangle(10, 20);
+        Rectangle rectangle = new Rectangle(20, 10);
         Assertions.assertEquals(200, rectangle.area());
     }
     @Test
