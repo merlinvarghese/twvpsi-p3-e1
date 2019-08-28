@@ -4,13 +4,23 @@ import org.junit.jupiter.api.Test;
 class RectangleTest {
 
     @Test
-    void checkAreaForInputLen10andWid20(){
+    void expectAreaIs200ForLength20andWidth10(){
         Rectangle rectangle = new Rectangle(10, 20);
-        Assertions.assertEquals(200, rectangle.computeArea());
+        Assertions.assertEquals(200, rectangle.area());
     }
     @Test
-    void checkAreaForInputLen10pt5andWid20pt5(){
-        Rectangle rectangle = new Rectangle(20.5d, 30.5d);
-        Assertions.assertEquals(625.25d, rectangle.computeArea());
+    void expectAreaIs625pt25ForLength30pt5andWidth20pt5(){
+        Rectangle rectangle = new Rectangle(30.5, 20.5);
+        Assertions.assertEquals(625.25, rectangle.area());
+    }
+    @Test
+    void expectPerimeterIs102ForLength30pt5andWidth20pt5(){
+        Rectangle rectangle = new Rectangle(30.5, 20.5);
+        Assertions.assertEquals(102, rectangle.perimeter());
+    }
+    @Test
+    void expectPerimeterIs1200ForLength500andWidth100(){
+        Rectangle rectangle = new Rectangle(500, 100);
+        Assertions.assertEquals(1200, rectangle.perimeter());
     }
 }
