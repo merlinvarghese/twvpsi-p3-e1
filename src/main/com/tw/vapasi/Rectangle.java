@@ -5,9 +5,23 @@ class Rectangle {
     private double length;
     private double width;
 
-    Rectangle(double length, double width) {
+    private Rectangle(double length, double width) {
         this.length = length;
         this.width = width;
+    }
+
+    private Rectangle(double side) {
+        this.length = side;
+        this.width = side;
+    }
+
+    static Rectangle createRectangle(double length, double width) {
+        return new Rectangle(length, width);
+    }
+
+
+    static Rectangle createSquare(double side) {
+        return new Rectangle(side);
     }
 
     double area() {
@@ -15,6 +29,6 @@ class Rectangle {
     }
 
     double perimeter() {
-        return (2 * (length + width));//changed names of methods and added perime
+        return (2 * (length + width));
     }
 }
